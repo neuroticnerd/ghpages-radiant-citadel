@@ -41,6 +41,8 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/adrg/frontmatter v0.2.0 h1:/DgnNe82o03riBd1S+ZDjd43wAmC6W35q67NHeLkPd4=
 github.com/adrg/frontmatter v0.2.0/go.mod h1:93rQCj3z3ZlwyxxpQioRKC1wDLto4aXHrbqIsnH9wmE=
+github.com/alex-shpak/hugo-book v0.0.0-20230213220505-036e037a63ba h1:GSDZxN4SjTRVylJjVwr2Mnn1oy/e2ngZG9m1ULJ2qFg=
+github.com/alex-shpak/hugo-book v0.0.0-20230213220505-036e037a63ba/go.mod h1:L4NMyzbn15fpLIpmmtDg9ZFFyTZzw87/lk7M2bMQ7ds=
 github.com/bep/godartsass v0.16.0 h1:nTpenrZBQjVSjLkCw3AgnYmBB2czauTJa4BLLv448qg=
 github.com/bep/godartsass v0.16.0/go.mod h1:6LvK9RftsXMxGfsA0LDV12AGc4Jylnu6NgHL+Q5/pE8=
 github.com/bep/golibsass v1.1.0 h1:pjtXr00IJZZaOdfryNa9wARTB3Q0BmxC3/V1KNcgyTw=

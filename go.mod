@@ -12,6 +12,7 @@ require (
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
+	github.com/alex-shpak/hugo-book v0.0.0-20230213220505-036e037a63ba // indirect
 	github.com/bep/godartsass v0.16.0 // indirect
 	github.com/bep/golibsass v1.1.0 // indirect
 	github.com/clbanning/mxj/v2 v2.5.7 // indirect
