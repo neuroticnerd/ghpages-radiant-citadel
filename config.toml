@@ -1,11 +1,11 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = ''
+baseURL = 'https://neuroticnerd.github.io/hugo-guide-radiant-citadel/'
 languageCode = 'en-us'
 title = 'KR4K3N'
 theme = 'hugo-book'
 uglyURLs=false
-#canonifyURLs=true
+canonifyURLs=true
 #absoluteURLs=true
 #relativeURLs=true
 
