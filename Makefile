@@ -10,15 +10,29 @@ GOTEST := $(GOCMD) test
 GORUN := $(GOCMD) run
 CURRENT_DIR := $(shell pwd)
 
+SYNC_FILE="sync.json"
+
 # VERSION := $(shell cat version.txt)
 # GIT_VERSION := $(shell git describe --tags --always)
 # BUILD := $(shell git rev-parse --short HEAD)
 BUILD_DATE := $(shell date --rfc-3339=date)
-all:
-	echo "Hello, world."
 
-clean:
-	echo "cleanup everywhere"
+all: sync
+
+mods:
+	hugo mod tidy
+	hugo mod vendor
+	hugo mod verify
+
+lint:
+	golangci-lint run --timeout=5m --skip-dirs vendor ./...
+
+format: $(SOURCE_LIST)
+	find . -name \*.go -not -path vendor -not -path target -exec goimports -w {} \;
+
+sync:
+	echo "this will export obsidian markdown files to hugo"
+	go run sync.go .
 
 copy-theme:
 	# cp -R themes/gruvhugo/exampleSite/* .
@@ -43,23 +57,23 @@ copy-theme:
 	echo "null"
 
 install-themes:
-	git submodule add https://github.com/wowchemy/hugo-second-brain-theme themes/second-brain
-	git submodule add https://github.com/wowchemy/hugo-documentation-theme themes/documentation
+# 	git submodule add https://github.com/wowchemy/hugo-second-brain-theme themes/second-brain
+# 	git submodule add https://github.com/wowchemy/hugo-documentation-theme themes/documentation
 	git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
-	git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng themes/hello-friend-ng
-	git submodule add https://github.com/h-enk/doks themes/doks
-	git submodule add https://github.com/halogenica/beautifulhugo themes/beautifulhugo
-	git submodule add https://gitlab.com/avron/gruvhugo.git themes/gruvhugo
-	git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc
-	git submodule add https://github.com/spf13/hyde themes/hyde
-	git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
-	git submodule add https://github.com/adityatelange/hugo-PaperMod themes/papermod
-	git submodule add https://github.com/victoriadrake/hugo-theme-introduction themes/introduction
-	git submodule add https://github.com/google/docsy themes/docsy
-	git submodule add https://github.com/apvarun/digital-garden-hugo-theme.git themes/digitalgarden
-	git submodule add https://gitlab.com/rmaguiar/hugo-theme-color-your-world themes/hugo-theme-color-your-world
-	git submodule add https://github.com/spech66/bootstrap-bp-hugo-startpage themes/bootstrap-bp-hugo-startpage
-	git submodule add https://github.com/McShelby/hugo-theme-relearn themes/hugo-theme-relearn
+# 	git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng themes/hello-friend-ng
+# 	git submodule add https://github.com/h-enk/doks themes/doks
+# 	git submodule add https://github.com/halogenica/beautifulhugo themes/beautifulhugo
+# 	git submodule add https://gitlab.com/avron/gruvhugo.git themes/gruvhugo
+# 	git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc
+# 	git submodule add https://github.com/spf13/hyde themes/hyde
+# 	git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+# 	git submodule add https://github.com/adityatelange/hugo-PaperMod themes/papermod
+# 	git submodule add https://github.com/victoriadrake/hugo-theme-introduction themes/introduction
+# 	git submodule add https://github.com/google/docsy themes/docsy
+# 	git submodule add https://github.com/apvarun/digital-garden-hugo-theme.git themes/digitalgarden
+# 	git submodule add https://gitlab.com/rmaguiar/hugo-theme-color-your-world themes/hugo-theme-color-your-world
+# 	git submodule add https://github.com/spech66/bootstrap-bp-hugo-startpage themes/bootstrap-bp-hugo-startpage
+# 	git submodule add https://github.com/McShelby/hugo-theme-relearn themes/hugo-theme-relearn
 
 nuke:
 # 	rm -rf archetypes/*
@@ -95,7 +109,3 @@ server:
 serve-%: THEME_DIR=$*
 serve-%:
 	cd themes/$(THEME_DIR)/exampleSite ; hugo server --verbose --themesDir ../..
-
-export:
-	echo "this will export the obsidian files to hugo"
-	go run main.go --source $(SOURCE_DIR) --destination $(TARGET_DIR) --sync-pairs $(SYNC_PAIRS)

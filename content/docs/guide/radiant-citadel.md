@@ -1,11 +1,10 @@
 ---
 date: "2023-03-14T17:15:20-04:00"
-description: Radiant Citadel Adventurer's Guide
+description: Adventurer's Guide to the Radiant Citadel
 draft: false
 lastmod: "2023-03-16T12:21:14-04:00"
 slug: radiant-citadel
 title: Radiant Citadel
-title2: Adventurer's Guide to the Radiant Citadel
 ---
 
 # Adventurer's Guide to the Radiant Citadel
