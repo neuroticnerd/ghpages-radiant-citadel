@@ -78,6 +78,11 @@ extract-example-%:
 
 dev: hugo serve
 
+mods:
+	go mod tidy
+	go mod vendor
+	go mod verify
+
 hugo:
 	hugo --gc --verbose --cleanDestinationDir --forceSyncStatic --ignoreCache --noBuildLock
 
