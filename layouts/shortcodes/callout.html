@@ -1,0 +1,7 @@
+<details class="alert alert-{{ .Get "type" }}" {{ if or (.Get "open") (in .Params "open") }}open{{ end }}>
+  {{- $summary := cond .IsNamedParams (.Get "title") (.Get 0) -}}
+  <summary class="alert-heading"><strong>{{ $summary | .Page.RenderString }}</strong></summary>
+  <div class="alert-content markdown-inner">
+    {{ .Inner | .Page.RenderString }}
+  </div>
+</details>
