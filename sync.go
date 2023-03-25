@@ -274,7 +274,7 @@ func ProcessMarkdown(path string, dest string) error {
 				if open {
 					callout.WriteString(`open=true `)
 				} else {
-					callout.WriteString(`open=false `)
+					// callout.WriteString(`open=false `)
 				}
 
 				callout.WriteString("%}}\n")

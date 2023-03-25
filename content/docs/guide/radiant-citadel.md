@@ -216,7 +216,7 @@ Known affectionately (or derisively) as the Old Lady, she is an older, brown-ski
 
 She has a complex relationship with her homeland. While she loves Akharin Sangar, she refuses to bend to the will of its angelic ruler, Atash. Rather than oppose him directly, she plays a delicate political game even as she worries about the future of her native land.
 
-{{% callout type="warning" title="SECRET: Sholeh's True Form" open=true %}}
+{{% callout type="warning" title="SECRET: Sholeh's True Form" %}}
 {{% figure alt="closest-i-could-find" src="/images/sholeh-dragon-01.png" %}}
 
 There are some long-time residents that remember the time shortly after the rediscovery of the Radiant Citadel but a fair number fewer that are long-lived enough to have actually been there - but the ones that were... they remember. They remember the huge gold scales and their mesmerizing brilliance. The long smooth gold horns, adorned near the base by a wide band of ornately crafted bright red metal, followed by 3 thinner bands. The sheath of leather strapped to the ends, trailing long red and gold chiffon streamers. The elegant swept back features of her head ending in smaller gold spikes. They remember the colossal form of the unfathomably ancient gold dragon Sholeh; the mastermind and leader of the expedition to rediscover and reawaken the Radiant Citadel 250 years ago. Since taking office as Speaker no one has seen her appear as a dragon in public; no one truly knows why that is, but there are as many theories as there are people on the Citadel.
