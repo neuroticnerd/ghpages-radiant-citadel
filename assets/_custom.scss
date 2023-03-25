@@ -308,9 +308,22 @@
 }
 
 .container {
-  max-width: 90rem;
+  max-width: 100rem;
 
-  .book-toc .book-toc-content {
+  .book-page article {
+    img {
+      border-radius: 35px;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.book-toc {
+  font-size: .8rem !important;
+
+  .book-toc-content {
     width: auto;
   }
 }
