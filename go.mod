@@ -1,4 +1,4 @@
-module github.com/neuroticnerd/hugo-guide-radiant-citadel
+module github.com/neuroticnerd/ghpages-radiant-citadel
 
 go 1.19
 
